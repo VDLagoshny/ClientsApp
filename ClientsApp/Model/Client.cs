@@ -7,7 +7,6 @@ namespace ClientsApp.Model
     public sealed class Client: INotifyPropertyChanged
     {
         private long _id;
-        private string? _fio;
         private string? _name;
         private string? _middleName;
         private string? _surname;
@@ -28,12 +27,7 @@ namespace ClientsApp.Model
 
         public string? Fio
         {
-            get { return _fio; }
-            set
-            {
-                _fio = $"{_surname} {_name} {_middleName}";
-                OnPropertyChanged(nameof(Fio));
-            }
+            get { return $"{_surname} {_name} {_middleName}"; }
         }
 
         public string? Name

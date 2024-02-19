@@ -38,8 +38,8 @@
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="5">
-                                        <TextBlock FontSize="18" Text="{Binding Path=Id}" />
-                                        <TextBlock Text="{Binding Path=Name}" />
+                                        <TextBlock FontSize="18" Text="{Binding Path=Fio}" />
+                                        <TextBlock Text="{Binding Path=Phone}" />
                                         <TextBlock Text="{Binding Path=Status}" />
                                     </StackPanel>
                                 </DataTemplate>
@@ -82,7 +82,7 @@
                                         <ColumnDefinition Width="1.5*" />
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" Text="Фамилия" Margin="5"/>
-                                    <TextBox Grid.Column="1" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"  Margin="3"/>
+                                    <TextBox Grid.Column="1" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"  Margin="3" />
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
