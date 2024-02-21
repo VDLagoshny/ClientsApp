@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ClientsApp.ViewModel
+namespace ClientsApp.ViewModel.Model
 {
     internal static class ModelsMapping
     {

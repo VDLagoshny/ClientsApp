@@ -1,4 +1,5 @@
 ﻿using Clients.Data;
+using ClientsApp.Model.ModelService;
 using ClientsApp.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -17,6 +18,7 @@ namespace ClientsApp
                     // Путь к БД передавать из кофигурационного файла
                     var dbPath = string.Empty;
                     services.AddServiceData(dbPath);
+                    services.AddSingleton<IClientService, ClientService>();
                     services.AddSingleton<AppViewModel>();
                     services.AddSingleton<App>();
                     services.AddSingleton<MainWindow>();
