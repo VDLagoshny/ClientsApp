@@ -26,9 +26,11 @@ namespace Clients.Data.Repository.Clients
         public string? Phone { get; set; }
 
         public string? Email { get; set; }
-        
+
+        public string? PlaceOfBirth { get; set; }
+
         [Required]
         public long? StatusId { get; set; }
-        public DbStatus PersonStatus { get; set; }
+        public DbStatus Status { get; set; }
     }
 }

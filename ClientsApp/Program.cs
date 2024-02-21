@@ -16,12 +16,12 @@ namespace ClientsApp
                 .ConfigureServices(services =>
                 {
                     // Путь к БД передавать из кофигурационного файла
-                    var dbPath = string.Empty;
+                    var dbPath = @"Data Source=ClientAppDb.sqlite";
                     services.AddServiceData(dbPath);
-                    services.AddSingleton<IClientService, ClientService>();
-                    services.AddSingleton<AppViewModel>();
-                    services.AddSingleton<App>();
-                    services.AddSingleton<MainWindow>();
+                    services.AddTransient<IClientService, ClientService>();
+                    services.AddTransient<AppViewModel>();
+                    services.AddTransient<App>();
+                    services.AddTransient<MainWindow>();
                 })
                 .Build();
 

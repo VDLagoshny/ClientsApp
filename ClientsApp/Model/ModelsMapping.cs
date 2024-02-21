@@ -48,7 +48,6 @@ namespace ClientsApp.ViewModel.Model
                 DateOfBirth = client.DateOfBirth ?? throw new ArgumentNullException(nameof(Client.DateOfBirth)),
                 Phone = client.Phone,
                 Email = client.Email,
-                PersonStatus = StatusMapToDb(Statuses.First(s => s.Id == client.Id) ?? throw new ArgumentException(nameof(Client.Status)))
             };
         }
     }
